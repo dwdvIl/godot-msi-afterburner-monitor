@@ -6,6 +6,7 @@
 
 Small GDExtension plugin that allows to retrieve data from MSI Afterburner, supports graphs minimum and maximum limits.
 Windows 32 bit and 64 bit only.
+Tested with Godot 4.3 and Godot 4.4.1.
 
 ## How to use
 
