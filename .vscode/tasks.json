@@ -1,0 +1,27 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "Godot Windows 64-bit Build",
+			"command": "python -m SCons platform=windows",
+			"args": [],
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "SConstruct Build"
+		},
+		{
+			"type": "cppbuild",
+			"label": "Godot Windows 32-bit Build",
+			"command": "python -m SCons platform=windows arch=x86_32",
+			"args": [],
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "SConstruct Build"
+		}
+	]
+}

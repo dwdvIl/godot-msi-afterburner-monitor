@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8oo1f568mhss"]
+
+[ext_resource type="Script" path="res://msi_afterburner_node.gd" id="1_8kwxu"]
+
+[sub_resource type="Gradient" id="Gradient_ymnlf"]
+colors = PackedColorArray(0, 0, 0, 1, 0.10748, 0.10748, 0.10748, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cwmap"]
+gradient = SubResource("Gradient_ymnlf")
+width = 8
+height = 8
+fill_from = Vector2(0.504587, 1)
+fill_to = Vector2(0.513761, 0.33945)
+
+[sub_resource type="SystemFont" id="SystemFont_wmltm"]
+font_names = PackedStringArray("Consolas")
+font_weight = 200
+
+[sub_resource type="LabelSettings" id="LabelSettings_erpqh"]
+font = SubResource("SystemFont_wmltm")
+font_color = Color(0, 1, 0, 1)
+
+[node name="Control" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_cwmap")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Text1" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(350, 648)
+layout_mode = 2
+text = "TEXT1"
+label_settings = SubResource("LabelSettings_erpqh")
+
+[node name="Text2" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(350, 648)
+layout_mode = 2
+text = "TEXT2"
+label_settings = SubResource("LabelSettings_erpqh")
+
+[node name="Text3" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(350, 648)
+layout_mode = 2
+text = "TEXT3"
+label_settings = SubResource("LabelSettings_erpqh")
+
+[node name="MSIAfterburnerNode" type="MSIAfterburnerNode" parent="." node_paths=PackedStringArray("text1", "text2", "text3")]
+script = ExtResource("1_8kwxu")
+text1 = NodePath("../HBoxContainer/Text1")
+text2 = NodePath("../HBoxContainer/Text2")
+text3 = NodePath("../HBoxContainer/Text3")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="MSIAfterburnerNode" method="_on_timer_timeout"]
