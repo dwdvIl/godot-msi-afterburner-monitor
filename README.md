@@ -13,6 +13,7 @@ Windows 32 bit and 64 bit only.
 
 Search for MSIAfterburnerNode and add it to your scene, then add a script.
 It's best to add a `Timer` and connect the `timeout()` signal to your node, like this:
+
 ![Node and Timer](node_and_timer.jpg)
 
 In your script, poll the data on every timeout, then you can display it (if available):
@@ -30,7 +31,7 @@ The name entry of the dictionary corresponds to the source name in MSI Afterburn
 `poll()` returns `true` if the data was retrieved successfully, else `false`.
 
 The structure of `data`:
-```json
+```gdscript
 {
 	&"<source_name>": {
 		"value": float,
