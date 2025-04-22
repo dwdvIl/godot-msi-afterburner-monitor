@@ -2,7 +2,7 @@
   <img width="256" height="256" src="icon.png">
 </p>
 
-# Godot MSI Afterburner
+# Godot MSI Afterburner Monitor
 
 Small GDExtension plugin that allows to retrieve data from MSI Afterburner, supports graphs minimum and maximum limits.
 Windows 32 bit and 64 bit only.
