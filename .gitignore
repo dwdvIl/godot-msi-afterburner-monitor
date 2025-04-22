@@ -20,3 +20,4 @@ demo/mono_crash.*.json
 /demo/addons/msiafterburner/*.dll
 src/*.obj
 *.import
+.sconsign.dblite
