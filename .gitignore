@@ -14,6 +14,9 @@ demo/.mono/
 demo/data_*/
 demo/mono_crash.*.json
 
-*.png
 *.psd
-/demo/addons/msiafterburner
+/demo/addons/msiafterburner/*.lib
+/demo/addons/msiafterburner/*.exp
+/demo/addons/msiafterburner/*.dll
+src/*.obj
+*.import

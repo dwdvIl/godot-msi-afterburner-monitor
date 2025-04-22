@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b8oo1f568mhss"]
 
-[ext_resource type="Script" path="res://msi_afterburner_node.gd" id="1_8kwxu"]
+[ext_resource type="Script" uid="uid://6tydwmkx61i6" path="res://msi_afterburner_node.gd" id="1_8kwxu"]
 
 [sub_resource type="Gradient" id="Gradient_ymnlf"]
 colors = PackedColorArray(0, 0, 0, 1, 0.10748, 0.10748, 0.10748, 1)
