@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "Godot Windows 64-bit Build",
+			"label": "Godot Windows 64-bit Debug Build",
 			"command": "python -m SCons platform=windows",
 			"args": [],
 			"problemMatcher": [
@@ -14,8 +14,30 @@
 		},
 		{
 			"type": "cppbuild",
-			"label": "Godot Windows 32-bit Build",
+			"label": "Godot Windows 32-bit Debug Build",
 			"command": "python -m SCons platform=windows arch=x86_32",
+			"args": [],
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "SConstruct Build"
+		},
+		{
+			"type": "cppbuild",
+			"label": "Godot Windows 64-bit Release Build",
+			"command": "python -m SCons platform=windows target=template_release",
+			"args": [],
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "SConstruct Build"
+		},
+		{
+			"type": "cppbuild",
+			"label": "Godot Windows 32-bit Release Build",
+			"command": "python -m SCons platform=windows arch=x86_32 target=template_release",
 			"args": [],
 			"problemMatcher": [
 				"$gcc"
